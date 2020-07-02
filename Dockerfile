@@ -4,7 +4,11 @@ RUN apt-get update &&\
 	apt-get upgrade -y &&\
 	apt-get install -y wget nginx default-mysql-server php php-mbstring php-fpm php-mysql openssl nano
 
-COPY srcs ./srcs/
+COPY srcs/start.sh				srcs/
+COPY srcs/wordpress.tar.gz		var/www/html/
+COPY srcs/phpmyadmin.tar		var/www/html/
+COPY srcs/defaulton				etc/nginx/sites-available/
+
 
 EXPOSE 80 443
 
