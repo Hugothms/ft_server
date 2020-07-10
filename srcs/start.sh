@@ -25,7 +25,7 @@ service mysql start
 mysql -u root -p123 < /srcs/init_mysql.sql
 
 echo "Genarating new SSL keys"
-cd etc/nginx
+cd /etc/nginx
 openssl req -x509 -out localhost.crt -keyout localhost.key \
 	-newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost'
 
