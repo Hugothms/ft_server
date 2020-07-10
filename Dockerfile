@@ -10,6 +10,7 @@ COPY srcs/init_mysql.sql		srcs/
 COPY srcs/wordpress.tar.gz		var/www/html/
 COPY srcs/phpmyadmin.tar		var/www/html/
 COPY srcs/defaulton				etc/nginx/sites-available/default
+COPY srcs/nginx.conf			etc/nginx/nginx.conf
 
 EXPOSE 80 443
 
