@@ -8,8 +8,10 @@ server {
 
 	index index.php index.htm index.nginx-debian.html;
 
+	server_name _wp;
+
 	location / {
-		autoindex on;
+		autoindex off;
 		try_files $uri $uri/ =404;
 	}
 
